@@ -21,8 +21,8 @@ public class LanguageRepositoryJDBCImpl implements LanguageRepository {
     private final String SQL_FIND_LANGUAGE_BY_EXTENSION= "select * from language where extension=?";
 
 
-    public LanguageRepositoryJDBCImpl(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public LanguageRepositoryJDBCImpl(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
 
